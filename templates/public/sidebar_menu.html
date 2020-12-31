@@ -1,0 +1,66 @@
+<div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+  <div class="menu_section">
+    <ul class="nav side-menu">
+      <li>
+        <a><i class="fa fa-home"></i> خانه </a>
+      </li>
+      <li>
+        <a
+          ><i class="fa fa-edit"></i> کارت ملی
+          <span class="fa fa-chevron-down"></span
+        ></a>
+        <ul class="nav child_menu">
+          <li>
+            <a href="{{ url_for('form', section='ثبت نام کارت ملی') }}"
+              >ثبت نام
+            </a>
+          </li>
+          <li><a href="{{ url_for('track', section='تقاضاهای کارت ملی ') }}"> پیگیری </a></li>
+        </ul>
+      </li>
+      <li>
+        <a
+          ><i class="fa fa-edit"></i> گذرنامه
+          <span class="fa fa-chevron-down"></span
+        ></a>
+        <ul class="nav child_menu">
+          <li>
+            <a href="{{ url_for('form', section='ثبت نام گذرنامه') }}"
+              >ثبت نام
+            </a>
+          </li>
+          <li><a href="{{ url_for('track', section='تقاضاهای گذرنامه') }}"> پیگیری </a></li>
+        </ul>
+      </li>
+      <li>
+        <a
+          ><i class="fa fa-edit"></i> گواهینامه
+          <span class="fa fa-chevron-down"></span
+        ></a>
+        <ul class="nav child_menu">
+          <li>
+            <a href="{{ url_for('form', section='ثبت نام گواهینامه') }}"
+              >ثبت نام
+            </a>
+          </li>
+          <li><a href="{{ url_for('track', section='تقاضاهای گواهینامه') }}"> پیگیری </a></li>
+          <li>
+            <a href=""> اضافه کردن آموزشگاه </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a><i class="fa fa-edit"></i> استعلام خلافی </a>
+      </li>
+      <li>
+        <a
+          ><i class="fa fa-bar-chart-o"></i> ارائه داده
+          <span class="fa fa-chevron-down"></span
+        ></a>
+        <ul class="nav child_menu">
+          <li><a href="other_charts.html">چارت های دیگر</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>

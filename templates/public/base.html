@@ -49,21 +49,32 @@
     />
 
     <!-- bootstrap-wysiwyg -->
-    <link href="{{ url_for('static', filename='vendors/google-code-prettify/bin/prettify.min.css') }}" rel="stylesheet">
-<!-- Select2 -->
-<link href="{{ url_for('static', filename='vendors/select2/dist/css/select2.min.css') }}" rel="stylesheet">
-<!-- Switchery -->
-<link href="{{ url_for('static', filename='vendors/switchery/dist/switchery.min.css') }}" rel="stylesheet">
-<!-- starrr -->
-<link href="{{ url_for('static', filename='vendors/starrr/dist/starrr.css') }}" rel="stylesheet') }}">
+    <link
+      href="{{ url_for('static', filename='vendors/google-code-prettify/bin/prettify.min.css') }}"
+      rel="stylesheet"
+    />
+    <!-- Select2 -->
+    <link
+      href="{{ url_for('static', filename='vendors/select2/dist/css/select2.min.css') }}"
+      rel="stylesheet"
+    />
+    <!-- Switchery -->
+    <link
+      href="{{ url_for('static', filename='vendors/switchery/dist/switchery.min.css') }}"
+      rel="stylesheet"
+    />
+    <!-- starrr -->
+    <link
+      href="{{ url_for('static', filename='vendors/starrr/dist/starrr.css') }}"
+      rel="stylesheet"
+    />
 
+    {% block head %} {% endblock %}
     <!-- Custom Theme Style -->
     <link
       href="{{ url_for('static', filename='build/css/custom.min.css') }}"
       rel="stylesheet"
     />
-    {% block head %}
-    {% endblock %}
   </head>
   <!-- /header content -->
   <body class="nav-md">
@@ -88,7 +99,7 @@
               </div>
               <div class="profile_info">
                 <span>خوش آمدید,</span>
-                <h2>مهدی سخایی‌نیا</h2>
+                <h2>دکتر مهدی سخایی‌نیا</h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -96,66 +107,7 @@
             <br />
 
             <!-- sidebar menu -->
-            <div
-              id="sidebar-menu"
-              class="main_menu_side hidden-print main_menu"
-            >
-              <div class="menu_section">
-                <ul class="nav side-menu">
-                  <li>
-                    <a><i class="fa fa-home"></i> خانه </a>
-                  </li>
-                  <li>
-                    <a
-                      ><i class="fa fa-edit"></i> کارت ملی
-                      <span class="fa fa-chevron-down"></span
-                    ></a>
-                    <ul class="nav child_menu">
-                      <li><a href="{{ url_for('form', section='ثبت نام کارت ملی') }}">ثبت نام </a></li>
-                      <li><a href="form_advanced.html"> پیگیری </a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a
-                      ><i class="fa fa-edit"></i> گذرنامه
-                      <span class="fa fa-chevron-down"></span
-                    ></a>
-                    <ul class="nav child_menu">
-                      <li><a href="{{ url_for('form', section='ثبت نام گذرنامه') }}">ثبت نام </a></li>
-                      <li><a href="form_advanced.html"> پیگیری </a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a
-                      ><i class="fa fa-edit"></i> گواهینامه
-                      <span class="fa fa-chevron-down"></span
-                    ></a>
-                    <ul class="nav child_menu">
-                      <li><a href="{{ url_for('form', section='ثبت نام گواهینامه') }}">ثبت نام </a></li>
-                      <li><a href="form_advanced.html"> پیگیری </a></li>
-                      <li>
-                        <a href="form_advanced.html"> اضافه کردن آموزشگاه </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a
-                      ><i class="fa fa-edit"></i> استعلام خلافی
-                      </a>
-                    
-                  </li>
-                  <li>
-                    <a
-                      ><i class="fa fa-bar-chart-o"></i> ارائه داده
-                      <span class="fa fa-chevron-down"></span
-                    ></a>
-                    <ul class="nav child_menu">
-                      <li><a href="other_charts.html">چارت های دیگر</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
+            {% include 'public/sidebar_menu.html' %}
             <!-- /sidebar menu -->
 
             <!-- /menu footer buttons -->
@@ -199,105 +151,15 @@
         </div>
 
         <!-- top navigation -->
-        <div class="top_nav hidden-print">
-          <div class="nav_menu">
-            <nav>
-              <div class="nav toggle">
-                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
-              </div>
-
-              <ul class="nav navbar-nav navbar-right">
-                <li class="">
-                  <a
-                    href="javascript:;"
-                    class="user-profile dropdown-toggle"
-                    data-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    <img
-                      src="{{ url_for('static', filename='build/images/sakhai.jpeg') }}"
-                      alt=""
-                    />مهدی سخایی‌نیا
-                    <span class="fa fa-angle-down"></span>
-                  </a>
-                  <ul class="dropdown-menu dropdown-usermenu pull-right">
-                    <li><a href="javascript:;"> نمایه</a></li>
-                    <li>
-                      <a href="javascript:;">
-                        <span class="badge bg-red pull-right">50%</span>
-                        <span>تنظیمات</span>
-                      </a>
-                    </li>
-                    <li><a href="javascript:;">کمک</a></li>
-                    <li>
-                      <a href="login.html"
-                        ><i class="fa fa-sign-out pull-right"></i> خروج</a
-                      >
-                    </li>
-                  </ul>
-                </li>
-
-                <li role="presentation" class="dropdown">
-                  <a
-                    href="javascript:;"
-                    class="dropdown-toggle info-number"
-                    data-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    <i class="fa fa-envelope-o"></i>
-                    <span class="badge bg-green">{{messages|length}}<span>
-                  </a>
-                  <ul
-                    id="menu1"
-                    class="dropdown-menu list-unstyled msg_list"
-                    role="menu"
-                  >
-                  <!-- macro for showing messages inside dropdown-menu -->
-                  {% macro render_message(message) %}
-                    <li>
-                      <a>
-                        <span class="image"
-                          ><img
-                            src="{{ url_for('static', filename='build/images/'+ message.image) }}"
-                            alt="Profile Image"
-                        /></span>
-                        <span>
-                          <span>{{message.name}}</span>
-                          <span class="time">{{message.time}} دقیقه پیش</span>
-                        </span>
-                        <span class="message">
-                            {{message.text}}
-                        </span>
-                      </a>
-                    </li>
-                  {% endmacro %}
-                  {% for message in messages %}
-                  {{ render_message(message) }}
-                  {% endfor %}
-                    <li>
-                      <div class="text-center">
-                        <a>
-                          <strong>مشاهده تمام اعلان ها</strong>
-                          <i class="fa fa-angle-right"></i>
-                        </a>
-                      </div>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
+        {% include 'public/top_navigation.html' %}
         <!-- /top navigation -->
         <!-- /header content -->
 
         <!-- page content -->
         <div class="right_col" role="main">
-        <div class="col-md-12 col-sm-12 col-xs-12">
-        <div class="x_panel">
-        {% block body %}{% endblock %}
-        </div>
-        </div>
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="x_panel">{% block body %}{% endblock %}</div>
+          </div>
         </div>
         <!-- /page content -->
 

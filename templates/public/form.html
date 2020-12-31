@@ -1,6 +1,7 @@
-{% import "public/macros.html" as macros %} {% extends "public/base.html" %}
+{% import "public/macros.html" as macros %}
+{% extends "public/base.html" %}
 {%block title %} ورود{% endblock %} {% block body %}
-      <div class="row">
-        <div class="x_content">{{ macros.render_form(form, title) }}</div>
-      </div>
+<div class="row">
+  <div class="x_content">{{ macros.render_form(form, title) }}</div>
+</div>
 {% endblock %}
