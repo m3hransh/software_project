@@ -37,6 +37,10 @@ def login():
     """Loging page for staffs."""
     return render_template('public/login.html')
 
+@app.route('/statistics')
+def stats():
+    return render_template('public/statistics.html')
+
 @app.route('/track/<section>')
 def track(section):
     """List of demands for specified section."""
@@ -54,5 +58,5 @@ def track(section):
                99123412
                )
     ]
-    
+
     return render_template('public/tracking_staff.html', demands=demands, title=section)

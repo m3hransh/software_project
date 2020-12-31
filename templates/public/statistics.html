@@ -1,0 +1,13 @@
+{% import "public/macros.html" as macros %}
+{% extends "public/base.html" %}
+{%block title %} ورود{% endblock %} {% block body %}
+<div class="row">
+  <div class="x_content"><canvas id="barchart"></canvas></div>
+</div>
+{% endblock %}
+
+{% block script %}
+<script src="../static/vendors/Chart.js/dist/Chart.min.js"></script>
+<script src="../static/statistics.js"></script>
+
+{% endblock %}
