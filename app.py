@@ -13,7 +13,7 @@ def dashboard():
         {'name': 'مهران شهیدی', 'time': 3, 'image':'img.jpg',
             'text': 'آقای محسن کلوندی نیاز به ویرایش دارد...'},
         {'name': 'امیرعباس اسدی', 'time': 5, 'image':'img.jpg',
-         'text': 'من عرفان سیف رو از سیستم حذف کردم'}
+         'text': 'من عرفان سیف رو از زندگی حذف کردم'}
     ]
     return render_template('public/base.html', messages=messages)
 
