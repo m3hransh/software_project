@@ -2,7 +2,7 @@
   <div class="menu_section">
     <ul class="nav side-menu">
       <li>
-        <a><i class="fa fa-home"></i> خانه </a>
+        <a href=" {{ url_for('dashboard')}}"><i class="fa fa-home"></i> خانه </a>
       </li>
       <li>
         <a
@@ -45,12 +45,12 @@
           </li>
           <li><a href="{{ url_for('track', section='تقاضاهای گواهینامه') }}"> پیگیری </a></li>
           <li>
-            <a href=""> اضافه کردن آموزشگاه </a>
+            <a href="{{ url_for('form', section='ثبت آموزشگاه رانندگی') }}"> اضافه کردن آموزشگاه </a>
           </li>
         </ul>
       </li>
       <li>
-        <a><i class="fa fa-edit"></i> استعلام خلافی </a>
+        <a href="{{ url_for('form', section='خلافی خودرو') }}"><i class="fa fa-edit"></i> استعلام خلافی </a>
       </li>
       <li>
         <a
